@@ -11,7 +11,10 @@ router.get("/getpart/:id", async (req, res) => {
     return res.status(404).json({ success: false, message: "Enter a valid part code" });
 
   const sheetId = process.env.SHEET_ID; // Use environment variable for the sheet ID
+  console.log(sheetId);
+  console.log(process.env.GOOGLE_CREDENTIALS);
   const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS); // Parse the JSON string from the environment variable
+
 
   const seriesMapping = {
     1: "SERIES-1",
