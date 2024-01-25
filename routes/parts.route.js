@@ -59,11 +59,12 @@ router.get("/getpart/:id", async (req, res) => {
         sample: matchingRow[4],
         Photos: matchingRow[5],
         drawing: matchingRow[6],
-        stock: matchingRow[7],
-        location: matchingRow[8],
-        remark: matchingRow[9],
+        weight: matchingRow[7],
+        stock: matchingRow[8],
+        location: matchingRow[9],
+        remark: matchingRow[10],
         // Add more fields as needed
-        imageLink: matchingRow[10],
+        imageLink: matchingRow[11],
       };
 
       return res.status(200).json({ success: true, partInfo });
